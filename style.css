@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -136,8 +136,13 @@ p {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     animation: fadeInUp 1s ease-in-out;
+}
+
+.logo {
+    transition: all 1s;
+    border-radius: 50%;
 }
 
 .experience-card:hover {
@@ -145,10 +150,27 @@ p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-.experience-card h3 {
+#jobtext {
     margin-top: 0;
     font-size: 1.5em;
     color: #ff6b6b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jobtext .logo {
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-card:hover .logo {
+    color: #ff6b6b;
+    filter: none;
 }
 
 .experience-card p {
@@ -181,4 +203,17 @@ p {
     padding: 10px 0;
     text-align: center;
     color: #f1f1f1;
+}
+
+.logo {
+    width: 24px; /* Adjust width and height as needed */
+    height: 24px;
+    margin-right: 10px; /* Adjust margin as needed */
+    vertical-align: middle; /* Align the logo vertically with text */
+    filter: grayscale(100%); /* Convert the logo to black and white */
+    transition: filter 0.3s ease-in-out; /* Add transition effect */
+}
+
+.logo:hover {
+    filter: none; /* Remove black and white effect on hover */
 }
